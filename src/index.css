@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #0052CC;
+  --color-brand-green: #36B37E;
+  --color-brand-white: #FFFFFF;
+  --color-brand-bg: #F4F5F7;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --bg: #F4F5F7;
+  --ink: #172B4D;
+  --primary: #0052CC;
+  --secondary: #36B37E;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Accessibility for Elderly */
+.text-elderly {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .text-elderly {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.vital-card {
+  @apply bg-white rounded-2xl p-6 shadow-sm border border-gray-100 transition-all hover:shadow-md;
+}
+
+.btn-primary {
+  @apply bg-brand-blue text-white px-6 py-3 rounded-xl font-semibold hover:bg-brand-blue/90 transition-all flex items-center justify-center gap-2;
+}
+
+.btn-secondary {
+  @apply bg-brand-green text-white px-6 py-3 rounded-xl font-semibold hover:bg-brand-green/90 transition-all flex items-center justify-center gap-2;
+}
+
+.btn-sos {
+  @apply bg-red-600 text-white px-8 py-4 rounded-full font-bold text-xl shadow-lg hover:bg-red-700 transition-all animate-pulse flex items-center justify-center gap-2;
+}
